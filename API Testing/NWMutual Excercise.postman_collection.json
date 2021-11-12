@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "2c03430a-c3cb-4d3f-9cb5-383e9aa3c6cf",
+		"name": "NWMutual Excercise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "05c11740-23fa-4ce1-b088-b8a4e0f89100",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"let schema = {",
+							"  \"userId\": {",
+							"    \"type\": \"integer\"",
+							"  },",
+							"  \"id\": {",
+							"      \"type\": \"integer\"",
+							"  },",
+							"  \"title\": {",
+							"      \"type\": \"string\"",
+							"  },",
+							"  \"body\": {",
+							"      \"type\": \"string\"",
+							"  }",
+							"};",
+							"",
+							"let jsonResponse = pm.response.json();",
+							"pm.test('Schema is valid', function() {",
+							"  pm.expect(tv4.validate(jsonResponse, schema)).to.be.true;",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/posts",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c2c3aa6e-e037-41bb-a0d9-773c1415e29d",
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([201,202]);",
+							"});",
+							"",
+							"let schema = {",
+							"  \"userId\": {",
+							"    \"type\": \"integer\"",
+							"  },",
+							"  \"id\": {",
+							"      \"type\": \"integer\"",
+							"  },",
+							"  \"title\": {",
+							"      \"type\": \"string\"",
+							"  },",
+							"  \"body\": {",
+							"      \"type\": \"string\"",
+							"  }",
+							"};",
+							"",
+							"let jsonResponse = pm.response.json();",
+							"pm.test('Schema is valid', function() {",
+							"  pm.expect(tv4.validate(jsonResponse, schema)).to.be.true;",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 18,\n    \"title\": \"Example Post Test\",\n    \"body\": \"Sample text would go here\"\n  }"
+				},
+				"url": {
+					"raw": "{{URL}}/posts",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "09b86dd3-c35f-491f-a6fe-f06bcb716821",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"let schema = {",
+							"  \"userId\": {",
+							"    \"type\": \"integer\"",
+							"  },",
+							"  \"id\": {",
+							"      \"type\": \"integer\"",
+							"  },",
+							"  \"title\": {",
+							"      \"type\": \"string\"",
+							"  },",
+							"  \"body\": {",
+							"      \"type\": \"string\"",
+							"  }",
+							"};",
+							"",
+							"let jsonResponse = pm.response.json();",
+							"pm.test('Schema is valid', function() {",
+							"  pm.expect(tv4.validate(jsonResponse, schema)).to.be.true;",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"New Example Post Test\",\n    \"body\": \"New Sample text would go here, new text\"\n  }"
+				},
+				"url": {
+					"raw": "{{URL}}/posts/5",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"posts",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "22133b5f-22fa-4714-a756-17cf1044ef42",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/posts/2",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"posts",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

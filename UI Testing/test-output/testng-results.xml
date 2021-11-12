@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="2435" started-at="2021-11-12T11:24:36 EST" finished-at="2021-11-12T11:24:38 EST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="2435" started-at="2021-11-12T11:24:36 EST" finished-at="2021-11-12T11:24:38 EST">
+      <class name="tests.CheckOut_TC1">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:tests.CheckOut_TC1@7d9f158f]" name="initialize" is-config="true" duration-ms="411" started-at="2021-11-12T11:24:36 EST" finished-at="2021-11-12T11:24:36 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="verifyItemsAddedToCart()[pri:0, instance:tests.CheckOut_TC1@7d9f158f]" name="verifyItemsAddedToCart" duration-ms="1195" started-at="2021-11-12T11:24:37 EST" finished-at="2021-11-12T11:24:38 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyItemsAddedToCart -->
+        <test-method status="PASS" signature="verifyItemsAndTotalAtCheckout()[pri:0, instance:tests.CheckOut_TC1@7d9f158f]" name="verifyItemsAndTotalAtCheckout" duration-ms="657" started-at="2021-11-12T11:24:38 EST" finished-at="2021-11-12T11:24:38 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyItemsAndTotalAtCheckout -->
+        <test-method status="PASS" signature="verifyLoginPageLoaded()[pri:0, instance:tests.CheckOut_TC1@7d9f158f]" name="verifyLoginPageLoaded" duration-ms="6" started-at="2021-11-12T11:24:38 EST" finished-at="2021-11-12T11:24:38 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginPageLoaded -->
+        <test-method status="PASS" signature="verifyOrderCompleted()[pri:0, instance:tests.CheckOut_TC1@7d9f158f]" name="verifyOrderCompleted" duration-ms="25" started-at="2021-11-12T11:24:38 EST" finished-at="2021-11-12T11:24:38 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyOrderCompleted -->
+        <test-method status="PASS" signature="TeardownTest()[pri:0, instance:tests.CheckOut_TC1@7d9f158f]" name="TeardownTest" is-config="true" duration-ms="94" started-at="2021-11-12T11:24:38 EST" finished-at="2021-11-12T11:24:38 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TeardownTest -->
+      </class> <!-- tests.CheckOut_TC1 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
